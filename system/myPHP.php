@@ -1,7 +1,7 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=db_group8";
-$username = "root";
-$password = "";
+$dsn = "mysql:host=sql110.infinityfree.com;dbname=if0_37142593_kabesa";
+$username = "if0_37142593";
+$password = "ZmkmqNKWle76Jt";
 
 try {
   $pdo = new PDO($dsn, $username, $password);
