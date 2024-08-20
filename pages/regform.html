@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/regform.css">
+    <title>Register Form</title>
+</head>
+<body>
+    <!-- <img src="../img/mainbg.jpg" width="100%" style="position: absolute; top: 0;"> -->
+    <nav>
+        <div class="logo"><h3>Abyssal Guild</h3></div>
+        <div class="tri"></div>
+        <a href="../pages/homepage.html">Home</a>
+        <p style="margin-left: 20px; pointer-events: none;">></p>
+        <p style="margin-left: 20px; pointer-events: none;">Registration Form</p>
+    </nav>
+    <div class="regHolder">
+        <img src="../img/cuteChibi.png" class="chibi">
+    <div class="container">
+        <form action="../system/function.php" method="post">
+            <p style="color: white; margin-bottom: 5px; font-family: istitik; letter-spacing: 2px; font-size: 40px;">Register</p>
+            <h3 style="margin-bottom: 15px; color: white; background: rgb(238, 182, 0); width: max-content; padding: 3px 10px; border-radius: 20px 0 20px 0;">Personal Information</h3>
+            <div class="regform">
+                <div class="fullname">
+                    <label style="display: flex; flex-direction: column;">
+                        Last Name:
+                        <input type="text" name="last_name" required>
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                        First Name:
+                        <input type="text" name="first_name" required>
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                        Middle Name:
+                        <input type="text" name="middle_name" required>
+                    </label>
+                </div>
+                <div style="display: flex; width: auto; gap: 10px;">
+                    <label style="display: flex; flex-direction: column;">
+                        Age:
+                        <input type="number" name="age" placeholder="" style="width: 150px; text-align: center;" oninput="javascript: if (this.value.length > 2) this.value = this.value.slice(0, 2); required">
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                        Gender:
+                        <select name="gender" style="width: 150px;">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Rather not Say">Rather not say</option>
+                        </select>
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                        Civil Status:
+                        <select name="civil_status" style="width: 150px;"> 
+                            <option value="Single">Single</option>
+                            <option value="In a Relationship">In a Relationship</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorce">Divorce</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Kabit">Kabit</option>
+                        </select>
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                        Blood Type:
+                        <select name="blood_type" style="width: 150px;">
+                            <option value="Unknown">Unknown</option>
+                            <option value="A">Blood type: A</option>
+                            <option value="B">Blood type: B</option>
+                            <option value="AB">Blood type: AB</option>
+                            <option value="O">Blood type: O</option>
+                        </select>
+                    </label>
+                </div>
+                <label>
+                    Address: <br>
+                    <input type="text" name="home_address" class="home_address" required>
+                </label>
+                <div class="row4">
+                    <label style="display: flex; flex-direction: column; width: 250px;">
+                        Contact:
+                        <input type="text" name="contact">
+                    </label>
+                    <label>
+                        Email: <br>
+                        <input type="email" name="email" style="width: 350px;" required>
+                    </label>
+                    <label style="display: flex; flex-direction: column; width: 250px;">
+                        Religion:
+                        <input type="text" name="religion">
+                    </label>
+                </div>
+                <div style="display: flex; width: 770px; gap: 10px;">
+                    <label>
+                        School Last Attended: <br>
+                        <input type="text" name="school_last_attended" style="width: 350px;">
+                    </label>
+                    <label style="width: 195px;">
+                        Do you have Diploma? <br>
+                        <select name="diploma" style="width: 100%;">
+                            <option value="1">Yes, I do have</option>
+                            <option value="0">No, I don't have</option>
+                        </select>
+                    </label>
+                    <label style="width: 195px;">
+                        Do you have Docstamp? <br>
+                        <select name="docstamp" style="width: 100%;">
+                            <option value="1">Yes, I do have</option>
+                            <option value="0">No, I don't have</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" class="submit">
+        </form>
+        <!-- <img src="../img/women.png" width="auto" height="auto"> -->
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/homepage1.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <title>Abyssal Guild</title>
+</head>
+<body>
+    <header>
+        <button onclick="navMenu()" id="navBtn"><i class="fa-solid fa-bars"></i></button>
+        <a href="#" class="logo">Abyssal Guild</a>
+    </header>
+    <div class="navigation">
+        <!-- <img src="../img/logo_bg.png" width="100%" style="transform: translateY(30px);"> -->
+        <nav>
+            <ul type="none">
+                <a href="../pages/faqs.html"><li>Faqs</li></a>
+                <a href="../pages/about.html"><li>About</li></a>
+                <a href="../pages/services.html"><li>Services</li></a>
+                <a href="../pages/contact.html"><li>Contacts</li></a>
+                <a href="../pages/displayRegistered.php"><li>Adventurers</li></a>
+            </ul>
+        </nav>
+    </div>
+    <div class="registration">
+        <div class="registrationForm">
+            <div class="introduction">
+                <img src="../img/women.png" class="women">
+                <div class="card">
+                    <div class="tri"></div>
+                    <div class="box">
+                        <p id="letter"></p>
+                        <button class="next_btn">Click Next<i class="fa-solid fa-circle-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="magic-circle-holder">
+                    <img class="magic-animation" src="../img/magic-circle.jpg">
+                </div>
+            </div>
+            <button class="closeBtn">close</button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- <img src="../img/mainbg.jpg" alt="" width="100%"> -->
+        <div class="featured">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <div class="slide first">
+                        <div class="image-container">
+                          <img src="../img/feature1.jpg" alt="">
+                          <div class="words">Legendary Fire Dragon</div>
+                        </div>
+                        <div class="image-container">
+                          <img src="../img/feature2.jpg" alt="">
+                          <div class="words">Elemental Warrior</div>
+                        </div>
+                        <div class="image-container">
+                          <img src="../img/feature3.jpg" alt="">
+                          <div class="words">Red Phoenix AI</div>
+                        </div>
+                      </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                </div>
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+                <script type="text/javascript">
+                    var counter = 2;
+                    setInterval(function() {
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++
+                        if (counter > 3) {
+                            counter = 1;
+                        }
+                    }, 4000);
+                </script>
+            </div>
+            <div class="ad">
+                <h3 class="typing">Recruiting Adventurer!</h3><br>
+                <p id="typing"></p>
+            </div>
+        </div>
+        <button class="registerBtn" onclick="regPopup()"><h3 style="border-bottom: 2px solid white;">REGISTER NOW!</h3><img src="../img/1.gif" height="100%" style="border-radius: 50%;"></button>
+    </div>
+    <script src="../scripts/homepage1.js"></script>
+</body>
+</html>

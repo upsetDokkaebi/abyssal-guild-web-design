@@ -1,0 +1,173 @@
+@font-face {
+    font-family: nunito;
+    src: url(../nunito.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: nunito, sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 70%;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: 1s;
+}
+.container.active {
+    opacity: 0;
+}
+.container .bg {
+    position: absolute;
+    width: 35%;
+    left: 0;
+    bottom: 0;
+    opacity: 0.3;
+    transform: translateY(10%) translateX(-20%);
+    z-index: -3;
+}
+.btnHolder {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+.btnHolder button {
+    border: none;
+    text-decoration: none;
+    color: white;
+    border-radius: 40px;
+    background: #daa520;
+    box-shadow: inset 5px 5px 10px #c0911c,
+                inset -5px -5px 10px #f4b924;
+    padding: 10px 25px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: large;
+}
+.btnHolder button:hover {
+    transform: scale(1.2);
+}
+.btnHolder a {
+    color: white;
+    text-decoration: none;
+}
+.magic-circle-holder {
+    display: none;
+}
+.magic-circle-holder.active {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    animation: popupAnimateHolder 0.8s;
+}
+@keyframes popupAnimateHolder {
+    from {
+        opacity: 0;
+    }
+}
+.magic-animation {
+    height: 70%;
+    border-radius: 100%;
+    animation: popupAnimate 1.5s,
+               circleAnimate 6s linear infinite;
+}
+
+@keyframes popupAnimate {
+    from {
+        height: 0;
+    }
+}
+
+@keyframes circleAnimate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container h1 {
+    overflow: hidden; /* Hide overflow to create typing effect */
+    border-right: 3px solid black; /* Cursor effect */
+    white-space: nowrap; /* Prevent line break */
+    padding: 0 5px;
+    animation: typing 2s linear, cursor 0.5s step-end infinite;
+}
+  
+@keyframes typing {
+    0% {
+        width: 0; /* Start with zero width */
+    }
+    100% {
+        width: 100%; /* Gradually increase width to full text length */
+    }
+}
+  
+@keyframes cursor {
+    0%, 100% {
+      border-color: transparent; /* Cursor hidden at start and end */
+    }
+    50% {
+      border-color: black; /* Cursor visible in the middle */
+    }
+}
+  
+  
+
+
+
+@media (max-width: 700px) {
+    .container {
+        width: 80%;
+    }
+    .container h1 {
+        font-size: 30px;
+    }
+    .container .bg {
+        width: 70%;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+@media (max-width: 360px) {
+    .container {
+        width: 90%;
+    }
+    .container h1 {
+        font-size: 25px;
+    }
+    .container .bg {
+        width: 70%;
+    }
+}
